@@ -27,7 +27,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement_main.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement_main.iml" group="usermanagement" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement_test.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement_test.iml" group="usermanagement" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_main.iml" group="userweb" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_test.iml" group="userweb" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper.iml" />
