@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/gloagen.iml" filepath="$PROJECT_DIR$/.idea/gloagen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_main.iml" group="userweb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_test.iml" group="userweb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper_main.iml" group="userwrapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper_test.iml" group="userwrapper" />
+    </modules>
+  </component>
+</project>
