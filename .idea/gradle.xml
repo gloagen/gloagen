@@ -5,12 +5,77 @@
       <GradleProjectSettings>
         <option name="createEmptyContentRootDirectories" value="true" />
         <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/central" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../Program Files/gradle-3.2.1" />
+        <option name="gradleJvm" value="JAVA_1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/central" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/centralmanagement" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../Program Files/gradle-3.2.1" />
         <option name="gradleJvm" value="JAVA_1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/centralmanagement" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/centralwrapper" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../Program Files/gradle-3.2.1" />
+        <option name="gradleJvm" value="JAVA_1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/centralwrapper" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/jobrequest" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../Program Files/gradle-3.2.1" />
+        <option name="gradleJvm" value="JAVA_1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/jobrequest" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/jobrequestmanagement" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../Program Files/gradle-3.2.1" />
+        <option name="gradleJvm" value="JAVA_1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/jobrequestmanagement" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/jobrequestwrapper" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../Program Files/gradle-3.2.1" />
+        <option name="gradleJvm" value="JAVA_1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/jobrequestwrapper" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
@@ -89,6 +154,19 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/traderwrapper" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/user" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../Program Files/gradle-3.2.1" />
+        <option name="gradleJvm" value="JAVA_1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/user" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

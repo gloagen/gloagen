@@ -2,8 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="central_main" target="1.5" />
+      <module name="central_test" target="1.5" />
       <module name="centralmanagement_main" target="1.5" />
       <module name="centralmanagement_test" target="1.5" />
+      <module name="centralwrapper_main" target="1.5" />
+      <module name="centralwrapper_test" target="1.5" />
+      <module name="jobrequest_main" target="1.5" />
+      <module name="jobrequest_test" target="1.5" />
+      <module name="jobrequestmanagement_main" target="1.5" />
+      <module name="jobrequestmanagement_test" target="1.5" />
+      <module name="jobrequestwrapper_main" target="1.5" />
+      <module name="jobrequestwrapper_test" target="1.5" />
       <module name="propertymanagement_main" target="1.5" />
       <module name="propertymanagement_test" target="1.5" />
       <module name="propertysearch_main" target="1.5" />
@@ -16,6 +26,8 @@
       <module name="tradersearch_test" target="1.5" />
       <module name="traderwrapper_main" target="1.5" />
       <module name="traderwrapper_test" target="1.5" />
+      <module name="user_main" target="1.5" />
+      <module name="user_test" target="1.5" />
       <module name="usermanagement_main" target="1.5" />
       <module name="usermanagement_test" target="1.5" />
       <module name="userweb_main" target="1.5" />
