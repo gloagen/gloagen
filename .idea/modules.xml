@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/gloagen.iml" filepath="$PROJECT_DIR$/.idea/gloagen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertymanagement.iml" filepath="$PROJECT_DIR$/.idea/modules/propertymanagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertymanagement_main.iml" filepath="$PROJECT_DIR$/.idea/modules/propertymanagement_main.iml" group="propertymanagement" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertymanagement_test.iml" filepath="$PROJECT_DIR$/.idea/modules/propertymanagement_test.iml" group="propertymanagement" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertysearch.iml" filepath="$PROJECT_DIR$/.idea/modules/propertysearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertysearch_main.iml" filepath="$PROJECT_DIR$/.idea/modules/propertysearch_main.iml" group="propertysearch" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertysearch_test.iml" filepath="$PROJECT_DIR$/.idea/modules/propertysearch_test.iml" group="propertysearch" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertywrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/propertywrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertywrapper_main.iml" filepath="$PROJECT_DIR$/.idea/modules/propertywrapper_main.iml" group="propertywrapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertywrapper_test.iml" filepath="$PROJECT_DIR$/.idea/modules/propertywrapper_test.iml" group="propertywrapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradermanagement.iml" filepath="$PROJECT_DIR$/.idea/modules/tradermanagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradermanagement_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tradermanagement_main.iml" group="tradermanagement" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradermanagement_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tradermanagement_test.iml" group="tradermanagement" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradersearch.iml" filepath="$PROJECT_DIR$/.idea/modules/tradersearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradersearch_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tradersearch_main.iml" group="tradersearch" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradersearch_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tradersearch_test.iml" group="tradersearch" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/traderwrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/traderwrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/traderwrapper_main.iml" filepath="$PROJECT_DIR$/.idea/modules/traderwrapper_main.iml" group="traderwrapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/traderwrapper_test.iml" filepath="$PROJECT_DIR$/.idea/modules/traderwrapper_test.iml" group="traderwrapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement_main.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement_main.iml" group="usermanagement" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement_test.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement_test.iml" group="usermanagement" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_main.iml" group="userweb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_test.iml" group="userweb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper_main.iml" group="userwrapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper_test.iml" group="userwrapper" />
+    </modules>
+  </component>
+</project>
