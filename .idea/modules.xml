@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centralmanagement.iml" filepath="$PROJECT_DIR$/.idea/modules/centralmanagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centralmanagement_main.iml" filepath="$PROJECT_DIR$/.idea/modules/centralmanagement_main.iml" group="centralmanagement" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/centralmanagement_test.iml" filepath="$PROJECT_DIR$/.idea/modules/centralmanagement_test.iml" group="centralmanagement" />
       <module fileurl="file://$PROJECT_DIR$/.idea/gloagen.iml" filepath="$PROJECT_DIR$/.idea/gloagen.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertymanagement.iml" filepath="$PROJECT_DIR$/.idea/modules/propertymanagement.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/propertymanagement_main.iml" filepath="$PROJECT_DIR$/.idea/modules/propertymanagement_main.iml" group="propertymanagement" />
@@ -24,7 +27,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement_main.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement_main.iml" group="usermanagement" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement_test.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement_test.iml" group="usermanagement" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_main.iml" group="userweb" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_test.iml" group="userweb" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper.iml" />

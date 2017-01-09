@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="Gradle : com.gloagen.trade : traderwrapper-1.0-SNAPSHOT.ear (exploded)">
+    <output-path>$PROJECT_DIR$/traderwrapper/build/libs/exploded/traderwrapper-1.0-SNAPSHOT.ear</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/traderwrapper">
+        <files>
+          <file path="$PROJECT_DIR$/traderwrapper/build/libs/exploded/traderwrapper-1.0-SNAPSHOT.ear/META-INF/application.xml" value="PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8YXBwbGljYXRpb24geG1sbnM9Imh0dHA6Ly9qYXZhLnN1bi5jb20veG1sL25zL2phdmFlZSINCiAgICAgICAgICAgICB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9qYXZhLnN1bi5jb20veG1sL25zL2phdmFlZSBodHRwOi8vamF2YS5zdW4uY29tL3htbC9ucy9qYXZhZWUvYXBwbGljYXRpb25fNi54c2QiDQogICAgICAgICAgICAgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgdmVyc2lvbj0iNiI+DQogICAgPGluaXRpYWxpemUtaW4tb3JkZXI+dHJ1ZTwvaW5pdGlhbGl6ZS1pbi1vcmRlcj4NCiAgICA8bGlicmFyeS1kaXJlY3Rvcnk+QVBQLUlORi9saWI8L2xpYnJhcnktZGlyZWN0b3J5Pg0KPC9hcHBsaWNhdGlvbj4NCg==" />
+        </files>
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/traderwrapper/build/libs/exploded/traderwrapper-1.0-SNAPSHOT.ear/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="traderwrapper_main/javaeeApplication/JavaEE Application Gradle : traderwrapper-1.0-SNAPSHOT.ear" />
+      <element id="dir-copy" path="$PROJECT_DIR$/traderwrapper/src/main/app" />
+    </root>
+  </artifact>
+</component>

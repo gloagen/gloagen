@@ -1,4 +1,4 @@
-group 'com.gloagen.web'
+group 'com.gloagen.central'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'

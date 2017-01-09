@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="centralmanagement_main" target="1.5" />
+      <module name="centralmanagement_test" target="1.5" />
       <module name="propertymanagement_main" target="1.5" />
       <module name="propertymanagement_test" target="1.5" />
       <module name="propertysearch_main" target="1.5" />
