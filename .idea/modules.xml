@@ -46,6 +46,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usermanagement_test.iml" filepath="$PROJECT_DIR$/.idea/modules/usermanagement_test.iml" group="usermanagement" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_main.iml" group="userweb" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userweb_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userweb_test.iml" group="userweb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper_main.iml" group="userwrapper" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/userwrapper_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userwrapper_test.iml" group="userwrapper" />
     </modules>
