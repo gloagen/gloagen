@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+   - source: deployment/userservice/properties/properties
+    desination: /opt/server/deployment/properties
+permissions:
+  - object: /opt/server/deployment/properties
+    owner: gloag
+    pattern: "*.*"
+    mode: 464
+hooks:
+  AfterInstall:
+    - location : /opt/server/deployment/scripts/deploy.py
+      runas: gloag
