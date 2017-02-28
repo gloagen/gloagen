@@ -1,0 +1,20 @@
+artifactory:
+    user: 'cariflo'
+    password: 'xxxxxxxxxxxxxx'
+    repository:
+        release:
+            url: 'http://mayze.gloagen.com:8081/artifactory/libs-release-local/
+                    {groupid-directory}/{app-name}/{version}/{app-name}-{version}.{type}'
+archive:
+    download:
+        directory: "../downloads/"
+        chunk_size: 2048
+        cleanup:
+            before: true
+            after: true
+tomcat:
+    webapps:
+        directory: 'C:\Data\Drive\Servers\apache-tomcat-9.0.0.M4\webapps'
+        backup:
+            enabled: false
+            directory:
