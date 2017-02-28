@@ -1,13 +1,15 @@
 #!/bin/sh
 
 spec_file="../properties/release.yml"
-backup_spec_directory="../properties/backup/"
+backup_spec_directory="../properties/backup"
 current_time=$(date +"%d%m%yT%H%M%S.%N")
 
 backup_last_release_spec() {
   echo "> backing up previous release.yml spec.."
+  mkdir -p ${backup_spec_directory}
+
   if [ -e "$spec_file" ]; then
-    backup_spec_file="$backup_spec_directory.$current_time.yml"
+    backup_spec_file="$backup_spec_directory/release.backup.$current_time.yml"
     echo "> created backup file: $backup_spec_file"
     mv "$spec_file" "$backup_spec_file"
 
