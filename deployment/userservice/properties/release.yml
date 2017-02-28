@@ -1,3 +1,4 @@
+# Userservice release properties
 release:
     groupid-directory: io/gloagen/service
     version: 1.0.24.BUILD # this is the release version, update this with the corresponding targetted version
