@@ -9,7 +9,7 @@ permissions:
   - object: /opt/server/deployment/scripts
     owner: gloag
     pattern: "*.*"
-    mode: 464
+    mode: 764
 #hooks:
  # BeforeInstall:
   #  - location: /opt/server/deployment/scripts/houseKeep_clean-release-spec.sh
