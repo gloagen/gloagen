@@ -3,7 +3,7 @@ os: linux
 files:
   # - source: deployment/userservice/properties/release.yml
   #   destination: /opt/server/deployment/properties/
-    - source: deployment/housekeep/
+    - source: utils/scripts/deployment/housekeep/
       destination: /opt/server/deployment/scripts
 permissions:
   - object: /opt/server/deployment/scripts
