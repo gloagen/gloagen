@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-   - source: deployment/userservice/properties/properties
+   - source: deployment/userservice/properties/release.yml
      desination: /opt/server/deployment/properties
 permissions:
   - object: /opt/server/deployment/properties
