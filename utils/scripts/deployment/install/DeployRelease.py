@@ -1,7 +1,6 @@
-import yaml
-import requests
 import os
-from pathlib import Path
+import requests
+import yaml
 
 
 class GetUserServiceRelease:

@@ -1,14 +1,19 @@
 version: 0.0
 os: linux
 files:
-   - source: deployment/userservice/properties/release.yml
-     destination: /opt/server/deployment/properties/
+  # - source: deployment/userservice/properties/release.yml
+  #   destination: /opt/server/deployment/properties/
+    - source: deployment/housekeep/
+      destination: /opt/server/deployment/scripts
 permissions:
-  - object: /opt/server/deployment/properties
+  - object: /opt/server/deployment/scripts
     owner: gloag
     pattern: "*.*"
     mode: 464
-hooks:
-  AfterInstall:
-    - location : /opt/server/deployment/scripts/deploy.py
-      runas: gloag
+#hooks:
+ # BeforeInstall:
+  #  - location: /opt/server/deployment/scripts/houseKeep_clean-release-spec.sh
+   #   runas: gloag
+ # AfterInstall:
+  #  - location : /opt/server/deployment/scripts/deploy.py
+   #   runas: gloag
