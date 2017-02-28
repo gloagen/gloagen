@@ -7,8 +7,8 @@ backup_last_release_spec() {
 
   if [ -e "$current_spec_file" ]; then
 
-    current_time = $(date + %d%m%y%H%M%S%N)
-    backup_spec_file = "../properties/release.backup.$current_time.yml"
+    current_time=$(date + %d%m%y%H%M%S%N)
+    backup_spec_file="../properties/release.backup.$current_time.yml"
     echo "> created backup file: $backup_spec_file"
     mv "$current_spec_file" "$backup_spec_file"
 
