@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
    - source: deployment/userservice/properties/properties
-    desination: /opt/server/deployment/properties
+     desination: /opt/server/deployment/properties
 permissions:
   - object: /opt/server/deployment/properties
     owner: gloag
