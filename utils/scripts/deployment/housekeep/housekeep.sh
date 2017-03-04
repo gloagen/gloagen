@@ -1,7 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
-spec_file="../properties/release.yml"
-backup_spec_directory="../properties/backup"
+if [ -n "$DEPLOY_PROPERTIES_HOME" ]; then
+  exit 104 # environment variable is not specified
+fi
+
+spec_file="$DEPLOY_PROPERTIES_HOME/release.yml"
+backup_spec_directory="$DEPLOY_PROPERTIES_HOME/backup"
 current_time=$(date +"%d%m%yT%H%M%S.%N")
 
 backup_last_release_spec() {
