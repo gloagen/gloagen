@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: utils/deployment
+  - source: deployment/
     destination: /opt/codedeploy-agent/deployment-root/gloagen-app
 permissions:
   - object: /opt/codedeploy-agent/deployment-root/gloagen-app
