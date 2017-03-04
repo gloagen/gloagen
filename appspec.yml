@@ -10,3 +10,6 @@ permissions:
     owner: gloag
     pattern: "*.*"
     mode: 764
+  - object: /opt/codedeploy-agent/deployment-root/gloagen-app/scripts/housekeep
+    pattern: "*.sh"
+    mode: 774
