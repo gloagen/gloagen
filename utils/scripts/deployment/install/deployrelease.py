@@ -3,7 +3,7 @@ import requests
 import yaml
 
 
-class GetUserServiceRelease:
+class DeployRelease:
     """ Utility class to read the user service relased archive
         and update tomcat with the downloaded release """
 
