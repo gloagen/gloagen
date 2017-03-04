@@ -1,10 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: utils/scripts/deployment/install
-    destination: /opt/codedeploy-agent/deployment-root/gloagen-app/install
+  - source: utils/deployment
+    destination: /opt/codedeploy-agent/deployment-root/gloagen-app
 permissions:
-  - object: /opt/codedeploy-agent/deployment-root/gloagen-app/install
-    pattern: "*.py"
+  - object: /opt/codedeploy-agent/deployment-root/gloagen-app
+    pattern: "*.*"
     mode: 774
     owner: gloag
+hooks:
+  AfterInstall:
+    - location: ../../../gloagen-app/scripts/properties-env.sh
+    #- location: /opt/server/deployment/scripts/deploy.py
+      #runas: gloag
