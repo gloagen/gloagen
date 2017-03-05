@@ -1,15 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: utils/scripts/deployment/properties
-    destination: /opt/codedeploy-agent/deployment-root/gloagen-app/properties
-  - source: utils/scripts/deployment/housekeep
-    destination: /opt/codedeploy-agent/deployment-root/gloagen-app/scripts/housekeep
+  - source: deployment/
+    destination: /opt/codedeploy-agent/deployment-root/gloagen-app
 permissions:
   - object: /opt/codedeploy-agent/deployment-root/gloagen-app
-    owner: gloag
     pattern: "*.*"
-    mode: 764
-  - object: /opt/codedeploy-agent/deployment-root/gloagen-app/scripts/housekeep
-    pattern: "*.sh"
     mode: 774
+    owner: gloag
+hooks:
+  AfterInstall:
+    - location: ../../../gloagen-app/scripts/housekeep/properties-env.sh
+    #- location: /opt/server/deployment/scripts/deploy.py
+      #runas: gloag
