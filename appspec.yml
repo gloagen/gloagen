@@ -8,8 +8,12 @@ permissions:
     pattern: "*.*"
     mode: 774
     owner: gloag
+  - object: /opt/codedeploy-agent/deployment-root/gloagen-app/scripts
+    pattern: "*.*"
+    mode: 774
+    owner: gloag
 hooks:
   AfterInstall:
-    - location: ../../../../gloagen-app/scripts/init-env.sh
+    - location: ../../../gloagen-app/scripts/init-env.sh
     #- location: /opt/server/deployment/scripts/deploy.py
       #runas: gloag
