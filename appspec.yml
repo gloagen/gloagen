@@ -1,19 +1,15 @@
 version: 0.0
 os: linux
 files:
-  # - source: deployment/userservice/properties/release.yml
-  #   destination: /opt/server/deployment/properties/
-    - source: utils/scripts/deployment/housekeep/
-      destination: /opt/server/deployment/scripts
+  - source: utils/scripts/deployment/properties
+    destination: /opt/codedeploy-agent/deployment-root/gloagen-app/properties
+  - source: utils/scripts/deployment/housekeep
+    destination: /opt/codedeploy-agent/deployment-root/gloagen-app/scripts/housekeep
 permissions:
-  - object: /opt/server/deployment/scripts
+  - object: /opt/codedeploy-agent/deployment-root/gloagen-app
     owner: gloag
     pattern: "*.*"
     mode: 764
-#hooks:
- # BeforeInstall:
-  #  - location: /opt/server/deployment/scripts/houseKeep_clean-release-spec.sh
-   #   runas: gloag
- # AfterInstall:
-  #  - location : /opt/server/deployment/scripts/deploy.py
-   #   runas: gloag
+  - object: /opt/codedeploy-agent/deployment-root/gloagen-app/scripts/housekeep
+    pattern: "*.sh"
+    mode: 774
