@@ -12,6 +12,14 @@ permissions:
     pattern: "*.*"
     mode: 764
     owner: gloag
+  - object: deployment/scripts/housekeep
+    pattern: "*.sh"
+    mode: 764
+    owner: gloag
+  - object: deployment/scripts/install
+    pattern: "*.py"
+    mode: 764
+    owner: gloag
 hooks:
   AfterInstall:
     - location: deployment/scripts/init-env.sh
