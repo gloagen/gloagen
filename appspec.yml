@@ -8,15 +8,15 @@ permissions:
     pattern: "*.*"
     mode: 644
     owner: gloag
-  - object: deployment/scripts
+  - object: deployment/scripts/
     pattern: "*.*"
     mode: 764
     owner: gloag
-  - object: deployment/scripts/housekeep
+  - object: deployment/scripts/housekeep/
     pattern: "*.sh"
     mode: 764
     owner: gloag
-  - object: deployment/scripts/install
+  - object: deployment/scripts/install/
     pattern: "*.py"
     mode: 764
     owner: gloag
