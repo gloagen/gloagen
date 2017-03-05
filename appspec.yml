@@ -10,6 +10,6 @@ permissions:
     owner: gloag
 hooks:
   AfterInstall:
-    - location: ../../../gloagen-app/scripts/housekeep/properties-env.sh
+    - location: ../../../gloagen-app/scripts/init-env.sh
     #- location: /opt/server/deployment/scripts/deploy.py
       #runas: gloag
