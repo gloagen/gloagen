@@ -42,11 +42,12 @@ prepare_deploy_dir() {
     #sudo chmod -R ug+rw "$GLOAG_DEPLOY_HOME/*.*"
     #sudo chown gloag -R "$GLOAG_DEPLOY_HOME"
 }
-
+: <<'END'
 for arg in "$@"
   do
     if [ -n "$arg" ] && [ "$arg" = "--prepare-directories" ]; then
       prepare_deploy_dir
     fi
   done
-
+END
+prepare_deploy_dir
