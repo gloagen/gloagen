@@ -2,7 +2,7 @@
 current_time=$(date +"%d%m%yT%H%M%S.%N")
 
 log(){
-   echo "$1" >> ${GLOAG_DEPLOY_LOGS_HOME}"/deploy-$current_time.log"
+   echo "$1" >> "$GLOAG_DEPLOY_LOGS_HOME/deploy-$current_time.log"
 }
 
 init_directories(){
@@ -25,7 +25,7 @@ copy_properties_to_app_dir(){
 }
 
 prepare_deploy_dir() {
-    if [ -n "$GLOAG_DEPLOY_HOME" ] && [ -n "$GLOAG_DEPLOY_LOGS_HOME" ]; then
+    if [ "$GLOAG_DEPLOY_HOME" == "" ] || [ ! "$GLOAG_DEPLOY_LOGS_HOME" ]; then
         exit 104 # environment variable is not specified
     fi
 
