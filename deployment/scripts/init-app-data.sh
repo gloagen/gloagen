@@ -3,6 +3,10 @@ current_time=$(date +"%d%m%yT%H%M%S.%N")
 work_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$work_dir"
 
+sudo chmod ug+x *.sh
+sudo chmod ug+x install/*.py
+sudo chown gloag -R install/
+
 ./deploy-properties-env.sh
 
 log(){
@@ -54,8 +58,6 @@ for arg in "$@"
 END
 
 
-sudo chmod ug+x *.sh
-sudo chmod ug+x install/*.py
-sudo chown gloag -R install/
+
 
 prepare_deploy_dir
