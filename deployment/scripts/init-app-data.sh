@@ -1,6 +1,6 @@
 #!/bin/sh
 current_time=$(date +"%d%m%yT%H%M%S.%N")
-work_dir="$PWD"
+work_dir='dirname $0'
 cd "$work_dir"
 
 sudo chmod ug+x *.sh
@@ -8,7 +8,7 @@ sudo chmod ug+x install/*.py
 sudo chown gloag -R install/
 
 cp deploy-properties-env.sh /etc/profile.d/ # set the environment variables
-. deploy-properties-env.sh
+${work_dir}/deploy-properties-env.sh
 
 log(){
    echo "$1" >> "${GLOAG_DEPLOY_LOGS_HOME}/deploy-$current_time.log"
