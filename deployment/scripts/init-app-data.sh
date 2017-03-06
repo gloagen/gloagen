@@ -40,7 +40,7 @@ set_permissions(){
 
 prepare_deploy_dir() {
    work_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-   cd work_dir
+   cd "$work_dir"
    log "> current working directory: $work_dir"
    validate_environment_variables
    clean_all_properties_dir
