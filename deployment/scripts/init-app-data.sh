@@ -38,7 +38,7 @@ prepare_deploy_dir() {
 
     copy_properties_to_app_dir
 
-    log "> attempting to set permissions for GLOAG_DEPLOY_HOME path: $GLOAG_DEPLOY_HOME/*.*"
+    log "> attempting to set permissions for GLOAG_DEPLOY_HOME path: ${GLOAG_DEPLOY_HOME}/*.*"
     #sudo chmod -R ug+rw "$GLOAG_DEPLOY_HOME/*.*"
     #sudo chown gloag -R "$GLOAG_DEPLOY_HOME"
 }
