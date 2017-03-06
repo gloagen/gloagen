@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/sh
 GLOAG_DEPLOY_HOME=/opt/codedeploy-agent/deployment-root/gloagen-app
 GLOAG_DEPLOY_LOGS_HOME=${GLOAG_DEPLOY_HOME}/logs
 GLOAG_WEBAPPS_HOME=/opt/server/tomcat/webapps

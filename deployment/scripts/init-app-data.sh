@@ -1,12 +1,13 @@
 #!/bin/sh
 current_time=$(date +"%d%m%yT%H%M%S.%N")
-work_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+work_dir="$PWD"
 cd "$work_dir"
 
 sudo chmod ug+x *.sh
 sudo chmod ug+x install/*.py
 sudo chown gloag -R install/
 
+cp deploy-properties-env.sh /etc/profile.d/ # set the environment variables
 ./deploy-properties-env.sh
 
 log(){
