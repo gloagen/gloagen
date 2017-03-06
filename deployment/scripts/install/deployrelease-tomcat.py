@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 from scripts.install.deployrelease import DeployRelease
-deploy_r = DeployRelease()
-deploy_r.deploy_to_tomcat()
+
+d_rel = DeployRelease()
+d_rel.init_logger()
+d_rel.deploy_to_tomcat()

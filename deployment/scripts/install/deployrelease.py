@@ -1,32 +1,51 @@
+import logging
 import os
 import requests
 import yaml
 
 
+def call_clsinit(*args, **kwargs):
+    cls = type(*args, **kwargs)
+    cls._clsinit()
+    return cls;
+
 class DeployRelease:
     """ Utility class to read the user service relased archive
         and update tomcat with the downloaded release """
 
+    __metaclass__ = call_clsinit
+
+    @classmethod
+    def _clsinit(cls):
+        init_logger()
+
+    def init_logger(self):
+        log_file = os.path.join(os.environ.get('GLOAG_DEPLOY_HOME'), "logs", "deployrelease.log")
+        # logging.basicConfig(filename=log_file, level=logging.DEBUG, format='%(asctime)s %(message)s')
+        lHandler = logging.FileHandler(log_file, mode='a', encoding=None, delay=False)
+        # lHandler = logging.RotatingFileHandler(log_file, mode='a', maxBytes=1000000, backupCount=5, encoding=None,
+        #                                             delay=0)
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        lHandler.setFormatter(formatter)
+        logger = logging.getLogger('deploy-release')
+        logger.setLevel(logging.DEBUG)
+        logger.addHandler(lHandler)
+        self.logger = logger
+
     def ___init___(self):
         self.data = []
 
-    def create_file_path(self, filename):
-        return "../properties/" + filename
-
     def get_release_properties(self):
-        releaseProps = self.read_data("release.yml")
-        return releaseProps
+        release_file_path = os.path.join(os.environ.get('GLOAG_DEPLOY_RELEASE_PROPERTIES_HOME'), "release.yml")
+        return self.read_data(release_file_path)
 
     def get_app_properties(self):
-        appProperties = self.read_data("app-properties.yml")
-        return appProperties
-
-    def build_archive_path(self, properties):
-        filename = properties['tomcat']['target-name'] + "." + properties['release']['type']
-        return self.create_file_path(filename)
+        appProperties_file_path = os.path.join(os.environ.get('GLOAG_DEPLOY_PROPERTIES_HOME'), "app-properties.yml")
+        return self.read_data(appProperties_file_path)
 
     def read_data(self, filename):
-        with open(self.create_file_path(filename), "r") as filedata:
+        self.logger.info("attempting to read data with file name: " + filename)
+        with open(filename, "r") as filedata:
             return yaml.load(filedata)
 
     def generate_artifact_download_url(self):
@@ -36,6 +55,7 @@ class DeployRelease:
         url = url.replace("{app-name}", releaseProps['release']['name'])
         url = url.replace("{version}", releaseProps['release']['version'])
         url = url.replace("{type}", releaseProps['release']['type'])
+        self.logger.info("generated artifact url is: " + url)
         return url
 
     def build_release_filename(self):
@@ -44,8 +64,8 @@ class DeployRelease:
 
     def create_artifact_download_fullpath(self):
         appProperties = self.get_app_properties()
-        filename = os.path.join(appProperties['archive']['download']['directory'], self.build_release_filename())
-        print("generated artifact full path is : ", filename)
+        filename = os.path.join(os.environ.get('GLOAG_DEPLOY_DOWNLOADS_HOME'), self.build_release_filename())
+        self.logger.info("generated artifact full path is : ", filename)
         return filename
 
     def get_artifact_repository_login_user(self):
@@ -58,41 +78,47 @@ class DeployRelease:
         return self.get_app_properties()['archive']['download']['chunk_size']
 
     def download_released_artifact(self):
+        download_url = self.generate_artifact_download_url()
         req = requests.get(self.generate_artifact_download_url(),
                            auth=(
                                self.get_artifact_repository_login_user(),
                                self.get_artifact_repository_login_password()),
                            stream=True)
 
-        print("created request with url:", req.url)
+        self.logger.info("created request with url:", req.url)
 
         artifactPath = self.create_artifact_download_fullpath()
         with open(artifactPath, "wb") as relFile:
-            print("downloading artifact ....")
+            self.logger.info("downloading artifact ....")
             for chunk in req.iter_content(chunk_size=self.get_artifact_download_chunk_size()):
                 relFile.write(chunk)
 
-        print("Download has now completed")
+        self.logger.info("Download has now completed")
         return artifactPath
 
     def get_tomcat_webapps_directory(self):
-        return self.get_app_properties()['tomcat']['webapps']['directory']
+        return os.environ.get('GLOAG_WEBAPPS_HOME')
 
     def remove_previous_deployment(self):
         filename = os.path.join(self.get_tomcat_webapps_directory(), self.build_release_filename())
-        print("file name: ", filename)
-        print("Checking if file exist in tomcat webapps directory")
+        self.logger.info("file name: ", filename)
+        self.logger.info("Checking if file exist in tomcat webapps directory")
         if os.path.exists(filename):
-            print("found file, now deleting ...")
+            self.logger.info("found file, now deleting ...")
             os.remove(filename)
-            print("file have now been deleted.")
+            self.logger.info("file have now been deleted.")
         else:
-            print("file not founf in tomcat directory!")
+            self.logger.info("file not founf in tomcat directory!")
         return filename
 
     def deploy_to_tomcat(self):
-        artifact = self.download_released_artifact()
-        print("downloaded articfact:", artifact)
-        targetArtifact = self.remove_previous_deployment()
-        os.rename(artifact, targetArtifact)
-        print("deplpoyment completed.")
+        try:
+            self.logger.info("commencing deplyment to tomcat..")
+            artifact = self.download_released_artifact()
+            self.logger.info("downloaded articfact:", artifact)
+            targetArtifact = self.remove_previous_deployment()
+            os.rename(artifact, targetArtifact)
+            self.logger.info("deployment completed.")
+        except Exception as err:
+            self.logger.error("Caught an exception whilst attempting to deploy to tomcat: {0}".format(err), err)
+            raise

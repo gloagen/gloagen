@@ -1,20 +1,17 @@
 artifactory:
     user: 'cariflo'
-    password: 'xxxxxxxxxxxxxx'
+    password: 'p5QUTcO0'
     repository:
         release:
-            url: 'http://mayze.internal-1.uk:8081/artifactory/libs-release-local/
-                    {groupid-directory}/{app-name}/{version}/{app-name}-{version}.{type}'
+            url: 'http://mayze.internal-1.uk:8081/artifactory/libs-release-local/{groupid-directory}/{app-name}/{version}/{app-name}-{version}.{type}'
 archive:
     download:
-        directory: "$GLOAG_DEPLOY_HOME/downloads"
         chunk_size: 2048
         cleanup:
             before: true
             after: true
 tomcat:
     webapps:
-        directory: '$GLOAG_WEBAPPS_HOME'
         backup:
             enabled: false
             directory:

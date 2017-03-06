@@ -3,5 +3,5 @@ os: linux
 hooks:
   AfterInstall:
     - location: deployment/scripts/init-env.sh
-    #- location: /opt/server/deployment/scripts/deploy.py
-      #runas: gloag
+    - location: deployment/install/deployrelease-tomcat.py
+      runas: gloag
