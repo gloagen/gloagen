@@ -8,7 +8,7 @@ sudo chmod ug+x install/*.py
 sudo chown gloag -R install/
 
 cp deploy-properties-env.sh /etc/profile.d/ # set the environment variables
-. deploy-properties-env.sh
+./deploy-properties-env.sh
 
 log(){
    echo "$1" >> "${GLOAG_DEPLOY_LOGS_HOME}/deploy-$current_time.log"
