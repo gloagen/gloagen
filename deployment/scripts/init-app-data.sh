@@ -3,8 +3,10 @@ current_time=$(date +"%d%m%yT%H%M%S.%N")
 work_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$work_dir"
 
+./deploy-properties-env.sh
+
 log(){
-   echo "$1" >> "$GLOAG_DEPLOY_LOGS_HOME/deploy-$current_time.log"
+   echo "$1" >> "${GLOAG_DEPLOY_LOGS_HOME}/deploy-$current_time.log"
 }
 
 init_directories(){
@@ -19,11 +21,11 @@ init_directories(){
 }
 
 copy_properties_to_app_dir(){
-    log "> copying files from ../properties/ to $GLOAG_DEPLOY_HOME/properties/"
-    cp -TR ../properties/ "$GLOAG_DEPLOY_HOME/properties/"
+    log "> copying files from ../properties/ to ${GLOAG_DEPLOY_PROPERTIES_HOME}"
+    cp -TR ../properties/ "${GLOAG_DEPLOY_PROPERTIES_HOME}"
 
-    log "> copying files from ../release/ to $GLOAG_DEPLOY_HOME/release/"
-    cp -TR ../release/ "$GLOAG_DEPLOY_HOME/release/"
+    log "> copying files from ../release/ to ${GLOAG_DEPLOY_RELEASE_HOME}"
+    cp -TR ../release/ "${GLOAG_DEPLOY_RELEASE_HOME}"
 }
 
 prepare_deploy_dir() {
@@ -33,8 +35,8 @@ prepare_deploy_dir() {
 
     log "> current working directory: $work_dir"
 
-    init_directories "$GLOAG_DEPLOY_RELEASE_PROPERTIES_HOME"
-    init_directories "$GLOAG_DEPLOY_PROPERTIES_HOME"
+    init_directories "${GLOAG_DEPLOY_RELEASE_PROPERTIES_HOME}"
+    init_directories "${GLOAG_DEPLOY_PROPERTIES_HOME}"
 
     copy_properties_to_app_dir
 
@@ -55,7 +57,5 @@ END
 sudo chmod ug+x *.sh
 sudo chmod ug+x install/*.py
 sudo chown gloag -R install/
-
-./deploy-properties-env.sh
 
 prepare_deploy_dir
