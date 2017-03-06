@@ -34,7 +34,7 @@ copy_properties_to_app_dir(){
 }
 
 prepare_deploy_dir() {
-    if [ "$GLOAG_DEPLOY_HOME" == "" ] || [ ! "$GLOAG_DEPLOY_LOGS_HOME" ]; then
+    if [ "$GLOAG_DEPLOY_HOME" == "" ]; then
         exit 104 # environment variable is not specified
     fi
 
