@@ -1,6 +1,6 @@
 #!/bin/sh
 current_time=$(date +"%d%m%yT%H%M%S.%N")
-work_dir='dirname $0'
+work_dir=`dirname $0`
 cd "$work_dir"
 
 sudo chmod ug+x *.sh
