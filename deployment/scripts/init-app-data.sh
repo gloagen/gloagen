@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 current_time=$(date +"%d%m%yT%H%M%S.%N")
 work_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$work_dir"
