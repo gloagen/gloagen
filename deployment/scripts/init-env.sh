@@ -7,4 +7,4 @@ sudo chmod ug+x *.sh
 sudo chmod ug+x install/*.py
 sudo chown gloag -R install/
 cp deploy-properties-env.sh /etc/profile.d/ # set the environment variables
-./init-app-data.sh --prepare-directories # backup previous release spec
+#./init-app-data.sh --prepare-directories # backup previous release spec
