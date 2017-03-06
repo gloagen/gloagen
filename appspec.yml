@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 hooks:
   AfterInstall:
-    - location: deployment/scripts/init-env.sh
+    #- location: deployment/scripts/init-env.sh
     - location: deployment/scripts/init-app-data.sh
     - location: deployment/scripts/install/deployrelease-tomcat.py
       runas: gloag

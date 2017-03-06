@@ -1,5 +1,7 @@
 #!/bin/bash
 current_time=$(date +"%d%m%yT%H%M%S.%N")
+work_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd "$work_dir"
 
 log(){
    echo "$1" >> "$GLOAG_DEPLOY_LOGS_HOME/deploy-$current_time.log"
@@ -29,8 +31,6 @@ prepare_deploy_dir() {
         exit 104 # environment variable is not specified
     fi
 
-    work_dir=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-    cd "$work_dir"
     log "> current working directory: $work_dir"
 
     init_directories "$GLOAG_DEPLOY_RELEASE_PROPERTIES_HOME"
@@ -50,4 +50,12 @@ for arg in "$@"
     fi
   done
 END
+
+
+sudo chmod ug+x *.sh
+sudo chmod ug+x install/*.py
+sudo chown gloag -R install/
+
+./deploy-properties-env.sh
+
 prepare_deploy_dir
