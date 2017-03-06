@@ -2,7 +2,7 @@
 current_time=$(date +"%d%m%yT%H%M%S.%N")
 
 log(){
-   echo "$1" >> "$GLOAG_DEPLOY_LOGS_HOME/deploy-$current_time.log"
+   echo "$1" >> ${GLOAG_DEPLOY_LOGS_HOME}"/deploy-$current_time.log"
 }
 
 init_directories(){
@@ -11,7 +11,8 @@ init_directories(){
     elif [ ! -d "$1" ]; then
         mkdir -p "$1"
     else
-        rm -rf "$1/*.*"
+        log "> attempting to delete: '$1'"
+        rm -rf "$1/*.raphael"
     fi
 }
 
@@ -37,8 +38,9 @@ prepare_deploy_dir() {
 
     copy_properties_to_app_dir
 
-    sudo chmod -R ug+rw "$GLOAG_DEPLOY_HOME/*.*"
-    sudo chown gloag -R "$GLOAG_DEPLOY_HOME"
+    log "> attempting to set permissions for GLOAG_DEPLOY_HOME path: $GLOAG_DEPLOY_HOME/*.*"
+    #sudo chmod -R ug+rw "$GLOAG_DEPLOY_HOME/*.*"
+    #sudo chown gloag -R "$GLOAG_DEPLOY_HOME"
 }
 
 for arg in "$@"
