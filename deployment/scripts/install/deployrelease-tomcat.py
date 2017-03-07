@@ -8,4 +8,4 @@ def deploy_tomcat(self):
     d_rel.deploy_to_tomcat()
 
 
-deploy_tomact()
+deploy_tomcat()
