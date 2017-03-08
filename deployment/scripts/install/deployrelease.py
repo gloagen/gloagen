@@ -114,7 +114,7 @@ class DeployRelease:
 
     def deploy_to_tomcat(self):
         try:
-            self.init_logger()
+            self.load_properties()
             self.logger.info("commencing deplyment to tomcat..")
             artifact = self.download_released_artifact()
             self.logger.info("downloaded articfact:", artifact)
@@ -127,4 +127,4 @@ class DeployRelease:
 
     def load_properties(self):
         path = "../properties/app-properties.yml"
-        self.properties = self.read_data(path)
+        self.appProperties = self.read_data(path)
