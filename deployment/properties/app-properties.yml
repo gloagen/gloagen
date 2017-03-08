@@ -1,12 +1,10 @@
 environment:
     variables:
-        DEPLOY_ROOT: '/opt/codedeploy-agent/deployment-root/gloagen-app'
-        DEPLOY_LOGS_DIR_NAME: 'logs'
+        LOGS_DIR: 'logs'
+        PROPERTIES_DIR: 'properties'
+        DOWNLOADS_DIR: 'downloads'
+        RELEASE_FILE: 'userservice.yml'
         WEBAPPS_HOME: '/opt/server/tomcat/webapps'
-        DEPLOY_PROPERTIES_DIR: 'properties'
-        DEPLOY_RELEASE_DIR: 'release/userservice
-        export GLOAG_DEPLOY_RELEASE_PROPERTIES_HOME=${GLOAG_DEPLOY_RELEASE_HOME}/properties
-        export GLOAG_DEPLOY_DOWNLOADS_HOME=${GLOAG_DEPLOY_HOME}/downloads
 artifactory:
     user: 'cariflo'
     password: 'p5QUTcO0'

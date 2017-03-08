@@ -1,5 +1,6 @@
 import logging
 import os
+
 import requests
 import yaml
 
@@ -36,7 +37,7 @@ class DeployRelease:
         self.data = []
 
     def get_release_properties(self):
-        release_file_path = os.path.join(os.environ.get('GLOAG_DEPLOY_RELEASE_PROPERTIES_HOME'), "release.yml")
+        release_file_path = os.path.join(os.environ.get('GLOAG_DEPLOY_RELEASE_PROPERTIES_HOME'), "userservice.yml")
         return self.read_data(release_file_path)
 
     def get_app_properties(self):
@@ -122,3 +123,7 @@ class DeployRelease:
         except Exception as err:
             self.logger.error("Caught an exception whilst attempting to deploy to tomcat: {0}".format(err), err)
             raise
+
+    def load_properties(self):
+        path = "../properties/app-properties.yml"
+        self.properties = self.read_data(path)

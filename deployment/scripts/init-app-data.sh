@@ -7,7 +7,7 @@ sudo chmod ug+x *.sh
 sudo chmod ug+x install/*.py
 sudo chown gloag -R install/
 
-cp deploy-properties-env.sh /etc/profile.d/ # set the environment variables
+cp . deploy-properties-env.sh /etc/profile.d/ # set the environment variables
 #./deploy-properties-env.sh
 
 log(){
