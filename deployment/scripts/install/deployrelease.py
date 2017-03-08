@@ -114,6 +114,7 @@ class DeployRelease:
 
     def deploy_to_tomcat(self):
         try:
+            self.init_logger()
             self.logger.info("commencing deplyment to tomcat..")
             artifact = self.download_released_artifact()
             self.logger.info("downloaded articfact:", artifact)
