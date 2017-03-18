@@ -11,7 +11,7 @@ class DeployRelease:
         and update tomcat with the downloaded release """
 
     def init_logger(self):
-        log_file = "../logs/deployrelease.log"
+        log_file = "logs/deployrelease.log"
         lHandler = logging.FileHandler(log_file, mode='a', encoding=None, delay=False)
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         lHandler.setFormatter(formatter)
