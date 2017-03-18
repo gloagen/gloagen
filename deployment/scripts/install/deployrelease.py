@@ -11,7 +11,7 @@ class DeployRelease:
         and update tomcat with the downloaded release """
 
     def init_logger(self):
-        log_file = "logs/deployrelease.log"
+        log_file = "../../logs/deployrelease.log"
         lHandler = logging.FileHandler(log_file, mode='a', encoding=None, delay=False)
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         lHandler.setFormatter(formatter)
@@ -110,9 +110,11 @@ class DeployRelease:
             raise
 
     def load_properties(self):
+        path = os.path.dirname(os.path.realpath(__file__))
+        os.chdir(path)
         self.init_logger()
-        path = "../properties/app-properties.yml"
+        path = "../../properties/app-properties.yml"
         self.appProperties = self.read_data(path)
         self.logger.info("loaded application properties")
-        self.releaseProperties = self.read_data("../properties/release.yml")
+        self.releaseProperties = self.read_data("../../properties/release.yml")
         self.logger.info("loaded release properties")
