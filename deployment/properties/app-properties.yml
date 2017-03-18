@@ -3,7 +3,7 @@ environment:
         LOGS_DIR: 'logs'
         PROPERTIES_DIR: 'properties'
         DOWNLOADS_DIR: 'downloads'
-        RELEASE_FILE: 'userservice.yml'
+        RELEASE_FILE: 'release.yml'
         WEBAPPS_HOME: '/opt/server/tomcat/webapps'
 artifactory:
     user: 'cariflo'
