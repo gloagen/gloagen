@@ -1,7 +1,7 @@
+import grp
 import logging
 import os
 import pwd
-import grp
 import requests
 import yaml
 
@@ -41,7 +41,6 @@ class DeployRelease:
         return self.releaseProperties['tomcat']['target-name'] + "." + self.releaseProperties['release']['type']
 
     def create_artifact_download_fullpath(self):
-        appProperties = self.get_app_properties()
         filename = os.path.join("../downloads", self.build_release_filename())
         self.logger.info("generated artifact full path is : ", filename)
         return filename
@@ -57,7 +56,7 @@ class DeployRelease:
 
     def download_released_artifact(self):
         download_url = self.generate_artifact_download_url()
-        req = requests.get(self.generate_artifact_download_url(),
+        req = requests.get(download_url,
                            auth=(
                                self.get_artifact_repository_login_user(),
                                self.get_artifact_repository_login_password()),
@@ -71,7 +70,7 @@ class DeployRelease:
             for chunk in req.iter_content(chunk_size=self.get_artifact_download_chunk_size()):
                 relFile.write(chunk)
 
-        self.logger.info("Download has now completed for artifact: "+ artifactPath)
+        self.logger.info("Download has now completed for artifact: " + artifactPath)
         return artifactPath
 
     def get_tomcat_webapps_directory(self):
