@@ -74,7 +74,7 @@ class DeployRelease:
         return artifactPath
 
     def get_tomcat_webapps_directory(self):
-        return os.environ.get('GLOAG_WEBAPPS_HOME')
+        return self.appProperties['environment']['variables']['WEBAPPS_HOME']
 
     def remove_previous_deployment(self):
         filename = os.path.join(self.get_tomcat_webapps_directory(), self.build_release_filename())
