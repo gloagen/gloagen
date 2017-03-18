@@ -41,7 +41,7 @@ class DeployRelease:
         return self.releaseProperties['tomcat']['target-name'] + "." + self.releaseProperties['release']['type']
 
     def create_artifact_download_fullpath(self):
-        filename = os.path.join("../downloads", self.build_release_filename())
+        filename = os.path.join("../../downloads", self.build_release_filename())
         self.logger.info("generated artifact full path is : ", filename)
         return filename
 
