@@ -30,7 +30,7 @@ class sharedutil:
 
     @staticmethod
     def start_jboss():
-        subprocess.Popen(["nohup", "/opt/server/jboss/wildfy/10.1.0/bin/standalone.sh", "--server-config ",
+        subprocess.Popen(["/opt/server/jboss/wildfy/10.1.0/bin/standalone.sh", "--server-config",
                           "standalone-full.xml"])
 
     @staticmethod
