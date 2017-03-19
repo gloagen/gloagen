@@ -30,8 +30,9 @@ class sharedutil:
 
     @staticmethod
     def start_jboss():
-        subprocess.Popen(["/opt/server/jboss/wildfy/10.1.0/bin/standalone.sh", "--server-config",
-                          "standalone-full.xml"])
+        pid = subprocess.Popen(["/opt/server/jboss/wildfy/10.1.0/bin/standalone.sh", "--server-config",
+                                "standalone-full.xml"]).pid
+        return pid
 
     @staticmethod
     def change_owner_and_move_file(owner, group, sourcePath, targetPath):
