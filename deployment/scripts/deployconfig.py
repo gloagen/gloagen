@@ -7,7 +7,8 @@ import yaml
 import fileinput
 
 class DeployConfig:
-    logger = None
+    def set_logger(self, logger):
+        self.logger = logger
 
     def get_local_ip(self):
         r = requests.get('http://instance-data/latest/meta-data/local-ipv4')
@@ -16,7 +17,7 @@ class DeployConfig:
         return self.local_ip
 
     def find_replace_token_in_file(self, filePath, token, replaceToken):
-        logger.info("attempting to relace token: " + token + " with: " + replaceToken + " in file: " + filePath)
+        self.logger.info("attempting to relace token: " + token + " with: " + replaceToken + " in file: " + filePath)
         with fileinput.FileInput(filePath, inplace=True, backup='.bak') as file:
             for line in file:
                 print (line.replace(token, replaceToken), end='')

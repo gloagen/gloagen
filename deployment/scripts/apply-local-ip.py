@@ -11,7 +11,7 @@ def apply_local_ip_and_move_file():
         target_config_file = "/opt/server/jboss/wildfy/10.1.0/standalone/configuration/standalone-full.xml"
 
         config = DeployConfig()
-        config.logger = sharedutil.init_logger("../logs/deploy-configs.log", "deploy-config")
+        config.set_logger(sharedutil.init_logger("../logs/deploy-configs.log", "deploy-config"))
         config.find_replace_token_in_file(filePath=config_file, \
                                           token='{internal-ip}', replaceToken=config.get_local_ip())
 
