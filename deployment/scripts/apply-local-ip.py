@@ -15,7 +15,7 @@ def apply_local_ip_and_move_file():
         config.find_replace_token_in_file(filePath=config_file, \
                                           token='{internal-ip}', replaceToken=config.get_local_ip())
 
-        sharedutil.change_owner_and_move_file(group="wildfly", owner="wildfly", sourcePath=config_file,
+        sharedutil.change_owner_and_move_file(group="glogn-app", owner="wildfy", sourcePath=config_file,
                                               targetPath=target_config_file)
     except Exception as err:
         raise
