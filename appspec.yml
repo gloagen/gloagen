@@ -7,4 +7,4 @@ hooks:
     - location: deployment/scripts/apply-local-ip.py
   ApplicationStart:
     - location: deployment/scripts/start-wildfly.sh
-    - runas: wildfy
+      runas: wildfy
