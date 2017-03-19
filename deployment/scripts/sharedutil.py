@@ -2,6 +2,7 @@ import grp
 import logging
 import os
 import pwd
+import subprocess
 
 
 class sharedutil:
@@ -22,6 +23,15 @@ class sharedutil:
         logger.setLevel(logging.DEBUG)
         logger.addHandler(lHandler)
         return logger
+
+    @staticmethod
+    def shutdown_jboss():
+        subprocess.check_call(['/opt/server/jboss/wildfy/10.1.0/bin/jboss-cli.sh', '--connect', 'command=:shutdown'])
+
+    @staticmethod
+    def start_jboss():
+        subprocess.Popen(["nohup", "/opt/server/jboss/wildfy/10.1.0/bin/standalone.sh", "--server-config ",
+                          "standalone-full.xml"])
 
     @staticmethod
     def change_owner_and_move_file(owner, group, sourcePath, targetPath):

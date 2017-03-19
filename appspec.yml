@@ -3,8 +3,8 @@ os: linux
 hooks:
   #ApplicationStop:
   AfterInstall:
-    - location: deployment/scripts/stop-wildfly.sh
+    #- location: deployment/scripts/stop-wildfly.sh
     - location: deployment/scripts/apply-local-ip.py
-    - location: deployment/scripts/start-wildfly.sh
-      runas: wildfy
+    #- location: deployment/scripts/start-wildfly.sh
+      #runas: wildfy
   #ApplicationStart:
