@@ -450,13 +450,16 @@
     </profile>
     <interfaces>
         <interface name="management">
-            <inet-address value="${jboss.bind.address.management:{internal-ip}}"/>
+            <!--<inet-address value="${jboss.bind.address.management:{internal-ip}}"/> -->
+            <any-address/>
         </interface>
         <interface name="public">
-            <inet-address value="${jboss.bind.address:{internal-ip}}"/>
+            <!-- <inet-address value="${jboss.bind.address:{internal-ip}}"/> -->
+            <any-address/>
         </interface>
         <interface name="unsecure">
-            <inet-address value="${jboss.bind.address.unsecure:{internal-ip}}"/>
+            <!-- <inet-address value="${jboss.bind.address.unsecure:{internal-ip}}"/> -->
+            <any-address/>
         </interface>
     </interfaces>
     <socket-binding-group name="standard-sockets" default-interface="public"
