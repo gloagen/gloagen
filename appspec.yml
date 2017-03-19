@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 hooks:
-  ApplicationStop:
-    - location: deployment/scripts/stop-wildfly.sh
+  #ApplicationStop:
+    #- location: deployment/scripts/stop-wildfly.sh
   AfterInstall:
     - location: deployment/scripts/apply-local-ip.py
   ApplicationStart:
