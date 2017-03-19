@@ -2,4 +2,4 @@ version: 0.0
 os: linux
 hooks:
   AfterInstall:
-    - location: deployment/scripts/server-config/apply-local-ip.py
+    - location: deployment/scripts/apply-local-ip.py
