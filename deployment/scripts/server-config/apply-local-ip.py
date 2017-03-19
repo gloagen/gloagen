@@ -11,3 +11,5 @@ def apply_local_ip():
                                   replaceToken=config.get_local_ip())
     except Exception as err:
         raise
+
+apply_local_ip()
