@@ -9,6 +9,8 @@ import fileinput
 class DeployConfig:
 
     def init_logger(self):
+        path = os.path.dirname(os.path.realpath(__file__))
+        os.chdir(path)
         log_file = "../../logs/deployconfig.log"
         lHandler = logging.FileHandler(log_file, mode='a', encoding=None, delay=False)
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
