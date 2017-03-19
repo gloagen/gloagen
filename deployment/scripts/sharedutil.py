@@ -31,8 +31,7 @@ class sharedutil:
 
     @staticmethod
     def start_jboss():
-        pid = subprocess.Popen(["/opt/server/jboss/wildfy/10.1.0/bin/start-wildfly.sh"]).pid
-        return pid
+        subprocess.check_call(["/opt/server/jboss/wildfy/10.1.0/bin/start-wildfly.sh"]).pid
 
     @staticmethod
     def change_owner_and_move_file(owner, group, sourcePath, targetPath):

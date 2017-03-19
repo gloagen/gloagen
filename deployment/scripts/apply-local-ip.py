@@ -25,9 +25,9 @@ def apply_local_ip_and_move_file():
                                               targetPath=target_config_file)
 
         logger.info("now attempting to restart wildfy application server")
-        pid = sharedutil.start_jboss()
+        sharedutil.start_jboss()
 
-        logger.info("wildfy application server has been restarted with pid: " + pid)
+        logger.info("wildfy application server has been restarted!")
 
     except Exception as err:
         raise
