@@ -1,10 +1,15 @@
 version: 0.0
 os: linux
+files:
+  - source: deployment/scripts/start-wildfly.sh
+    destination: /opt/server/jboss/wildfy/10.1.0/bin/
+permissions:
+  - object: /opt/server/jboss/wildfy/10.1.0/bin/start-wildfly.sh
+    owner: wildfy
+    group: glogn-app
+    mode: 764
+    type:
+      - file
 hooks:
-  #ApplicationStop:
   AfterInstall:
-    #- location: deployment/scripts/stop-wildfly.sh
     - location: deployment/scripts/apply-local-ip.py
-    #- location: deployment/scripts/start-wildfly.sh
-      #runas: wildfy
-  #ApplicationStart:

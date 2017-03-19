@@ -3,6 +3,7 @@ import logging
 import os
 import pwd
 import subprocess
+import sys
 
 
 class sharedutil:
@@ -30,8 +31,7 @@ class sharedutil:
 
     @staticmethod
     def start_jboss():
-        pid = subprocess.Popen(["/opt/server/jboss/wildfy/10.1.0/bin/standalone.sh", "--server-config",
-                                "standalone-full.xml"]).pid
+        pid = subprocess.Popen(["/opt/server/jboss/wildfy/10.1.0/bin/start-wildfly.sh"]).pid
         return pid
 
     @staticmethod
