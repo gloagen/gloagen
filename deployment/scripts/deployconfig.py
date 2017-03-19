@@ -21,5 +21,5 @@ class DeployConfig:
         with fileinput.FileInput(filePath, inplace=True, backup='.bak') as file:
             for line in file:
                 print (line.replace(token, replaceToken), end='')
-            logger.info("relaced all matched tokens in file: " + filePath)
+                self.logger.info("relaced all matched tokens in file: " + filePath)
             return filePath
