@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
+          xmlns="http://maven.apache.org/SETTINGS/1.1.0">
+    <servers>
+        <server>
+            <username>mathieur</username>
+            <password>{encrypted}</password>
+            <id>central</id>
+        </server>
+        <server>
+            <username>mathieur</username>
+            <password>{encrypted}</password>
+            <id>snapshots</id>
+        </server>
+    </servers>
+    <!-- <mirrors>
+      <mirror>
+        <mirrorOf>*</mirrorOf>
+        <name>central-repo</name>
+        <url>http://localhost:8081/artifactory/central-repo</url>
+        <id>central-repo</id>
+      </mirror>
+    </mirrors> -->
+    <profiles>
+        <profile>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>central-repo</name>
+                    <url>http://localhost:8081/artifactory/central-repo</url>
+                </repository>
+                <repository>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <id>snapshots</id>
+                    <name>central-repo</name>
+                    <url>http://localhost:8081/artifactory/central-repo</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>central-repo</name>
+                    <url>http://localhost:8081/artifactory/central-repo</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots/>
+                    <id>snapshots</id>
+                    <name>central-repo</name>
+                    <url>http://localhost:8081/artifactory/central-repo</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>artifactory</id>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>artifactory</activeProfile>
+    </activeProfiles>
+</settings>
